@@ -1,0 +1,109 @@
+     .header {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: var(--heavy-index);
+
+        //!----------------------------------------------------------------------------------      
+        /* .header__container */
+        &__container {
+           display: flex;
+           //   justify-content: space-between;
+           align-items: center;
+           min-height: 104px; // Записывает вместо padding у хедера ! НОРМ ВАРИАНТ
+
+           // min-height: 104px;
+           // border: 1px solid red;
+           @media(max-width: 992px) {
+              //   justify-content: space-between;
+           }
+
+           @media(max-width: 479px) {
+              justify-content: space-between;
+              min-height: 85px;
+           }
+        }
+
+        //!----------------------------------------------------------------------------------
+        /* .header__logo */
+        &__logo {
+           display: inline-block;
+           font-family: 'Montserrat';
+           font-weight: 700;
+           font-size: 24px;
+           line-height: 32px;
+           letter-spacing: 0.1px;
+           color: var(--ebony-clay-color);
+           margin: 0px 132px 0px 0px;
+
+           @media(max-width: 992px) {
+              margin: 0px 80px 0px 0px;
+           }
+
+           @media(max-width: 767px) {
+              margin: 0px 40px 0px 0px;
+           }
+
+           @media(max-width: 479px) {
+              margin: 0px 20px 0px 0px;
+
+           }
+        }
+
+        //!----------------------------------------------------------------------------------
+
+        /* .header__menu */
+        &__menu {
+           padding: 5px 0px; // Отступ безопасности 
+           //   margin: 0px 0px 0px 80px;
+        }
+
+        //!----------------------------------------------------------------------------------
+     }
+
+
+     //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+     .menu {
+
+        //!----------------------------------------------------------------------------------
+        /* .menu__list */
+        &__list {
+           display: flex;
+           flex-wrap: wrap;
+           //   column-gap: 21px;
+        }
+
+        //!----------------------------------------------------------------------------------
+        /* .menu__item */
+        &__item {
+
+           //!----------------------------------------------------------------------------------
+           /* .menu__item:not(:last-child) */
+           &:not(:last-child) {
+              margin: 0px 21px 0px 0px;
+              // @media(max-width: 992px) {
+              //    margin: 0px 10px 0px 0px;
+
+              // }
+              @media(max-width: 479px) {
+                 margin: 0px 15px 0px 0px;
+              }
+           }
+        }
+
+        //!----------------------------------------------------------------------------------
+        /* .menu__link */
+        &__link {
+           font-family: 'Montserrat';
+           font-weight: 600;
+           font-size: 14px;
+           line-height: 171%;
+           letter-spacing: 0.2px;
+           color: var(--dove-gray-color);
+
+           @media(max-width: 479px) {
+              font-size: 17px;
+           }
+        }
+     }

@@ -1,0 +1,111 @@
+body {
+   // background: #393939;
+   color: black;
+   font-weight: 500;
+   font-family: 'Montserrat' sans-serif;
+   background-color: #FAFAFA;
+
+}
+
+.container {
+   max-width: 1086px;
+   margin: 0 auto;
+   padding: 0px 20px;
+   // box-sizing: content-box;
+
+
+}
+
+
+.wrapper {
+   min-height: 100%;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+}
+
+.main {
+   flex: 1 1 auto; // ПОЗВОЛЯЕМ УВЕЛИЧИВАТЬСЯ
+}
+
+//!                                           ИЗОБРАЖЕНИЕ
+//Очень ахуенный подход внедрения img вместо bg 
+._ibg {
+   position: relative; // проблема лишь в точ что это не работает  .hero__image: position: absolute; ломает все 
+   width: 100%;
+   height: 100%;
+   // border: 1px solid green;
+
+}
+
+._ibg img {
+   position: absolute; // здесь не имеет смысла position ПО той же причине .hero__image: position: absolute;
+   width: 100%;
+   height: 100%;
+   left: 0;
+   top: 0;
+   object-fit: cover;
+   // object-position: 70%;
+
+
+
+}
+
+//!                                           ИЗОБРАЖЕНИЕ
+
+
+
+
+//!                       MAIN-HEADLINE                                   
+.main-headline {
+   display: flex;
+   flex-direction: column;
+   // align-items: center;
+   // text-align: center;
+   // justify-content: center;
+
+}
+
+.main-title {
+   font-family: 'Montserrat';
+   font-weight: 700;
+   font-size: 40px;
+   line-height: calc(57 / 40 * 100%);
+   letter-spacing: 0.2px;
+   color: var(--ebony-clay-color);
+   // margin: 0px 0px 50px 0px;
+
+
+}
+
+.main-title:not(:last-child) {
+   margin: 0px 0px 10px 0px;
+
+}
+
+
+.content-about__title {
+   @media(max-width:550px) {
+      font-size: 25px;
+      // border: 1px solid red;
+   }
+}
+
+
+//Если убирем Элемент снизу отступа не будет, тяжелая запись для понимания, ведь main-title только один. НО все работает
+
+.main-descr {
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 20px;
+   // text-align: center;
+   letter-spacing: 0.2px;
+   color: var(--dove-gray-color);
+   // max-width: 512px;
+
+
+}
+
+//!                       MAIN-HEADLINE                                   

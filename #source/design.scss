@@ -1,0 +1,146 @@
+.design {
+   padding: 80px 0px;
+
+   // border: 1px solid red;
+   // margin-top: -140px;
+   @media(max-width:992px) {
+      padding: 40px 0px;
+   }
+
+   @media(max-width:768px) {
+      padding: 30px 0px;
+   }
+}
+
+
+
+
+
+.design__descr {
+   // margin: 0px 0px 30px 0px;
+   //Сделал ошибку margin должен быть у design__headline
+}
+
+.design__headline {
+   margin: 0px 0px 50px 0px;
+   align-items: center;
+   text-align: center;
+
+   @media(max-width:768px) {
+      margin: 0px 0px 30px 0px;
+   }
+
+}
+
+.design {
+
+
+
+   &__body {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0px -15px -30px;
+   }
+
+   // .design__column
+
+
+   &__column {
+      flex: 0 1 25%;
+      padding: 0px 15px;
+      margin: 0px 0px 30px 0px;
+
+
+      @media(max-width:1200px) {
+         flex: 0 1 50%;
+      }
+
+      @media(max-width:479px) {
+         flex: 0 1 100%;
+      }
+
+   }
+
+   // @media(max-width:479px) {
+
+   //    .design__column {
+   //       flex: 0 1 100%;
+   //    }
+
+   //    .design__column:last-child {
+   //       margin: 0px;
+   //    }
+   // }
+   //МЕДИА выше нам не нужен там решает марджин отрицательный
+
+   // .design__item
+
+   &__item {
+      height: 100%;
+      // max-width: 230px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // text-align: center;
+      // border: 1px solid red;
+      // justify-content: center;
+      // white-space: nowrap; // Текст не будет переноситься на вторую строку
+      background: #fff;
+      padding: 30px 35px;
+   }
+}
+
+.item-stat>*:not(:last-child) {
+   margin: 0px 0px 10px 0px;
+}
+
+.item-stat {
+
+   // .item-stat__image
+
+   &__image {
+      // width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+   }
+
+   &__image img {
+      // width: 100%;
+      // height: 100%;
+      // object-fit: fill;
+   }
+
+   // .item-stat__title
+
+   &__title {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 57px;
+      letter-spacing: 0.2px;
+      color: #252B42;
+      flex: 1 1 auto;
+
+   }
+
+   // .item-stat__text
+
+   &__text {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      /* identical to box height, or 150% */
+
+      text-align: center;
+      letter-spacing: 0.1px;
+
+      /* second-text-color */
+
+      color: #737373;
+   }
+}

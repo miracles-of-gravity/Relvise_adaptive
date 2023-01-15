@@ -1,0 +1,161 @@
+.touch__headline {
+   align-items: center;
+   text-align: center;
+   margin: 0px 0px 110px 0px;
+
+   @media (max-width: 992px) {
+      margin: 0px 0px 50px 0px;
+   }
+}
+
+.touch-container {
+   // border: 1px solid red;
+   // padding: 0px 50px !important;
+}
+
+.touch {
+   padding: 80px 0px 148px 0px;
+
+   // .touch__cards
+   @media (max-width: 992px) {
+      padding: 80px 0px;
+   }
+
+   &__cards {
+
+      // align-items: center;
+      // text-align: center;
+      // border: 1px solid red;
+      margin: 0px -20px;
+
+      @media (min-width:1070px) {
+         margin: 0px 30px;
+         display: flex;
+         flex-wrap: wrap;
+
+      }
+   }
+
+   // .touch__card
+
+   &__card {
+
+      width: 100%;
+      // border: 1px solid red;
+      background: white;
+      padding: 50px;
+      text-align: center;
+
+      @media (min-width:1070px) {
+         flex: 0 1 33.333%;
+      }
+
+   }
+
+   // .touch__item
+
+   &__item {}
+
+   //??ЖЕСТКАЯ ЗАПИСЬ ДЛЯ ЖЕСТКИХ ВЕЩЕЙ 
+
+   &__item>*:not(:last-child) {
+      margin: 0px 0px 15px 0px;
+   }
+
+   //??ЖЕСТКАЯ ЗАПИСЬ ДЛЯ ЖЕСТКИХ ВЕЩЕЙ 
+
+}
+
+.touch__card-active {
+   background: #252B42;
+   // color: white;
+   // transition: 1s ease;
+
+
+   @media (min-width: 1070px) {
+      transform: scale(1.1);
+   }
+
+}
+
+.touch__card-active .touch__item * {
+   color: white;
+
+}
+
+.touch__card-active .touch-item__btn {
+   border: 1px solid white;
+   // color: white;
+}
+
+.touch__card-active:hover {
+
+   transition: 1s ease;
+}
+
+
+.touch-item {
+
+   // .touch-item__image
+
+   &__image {
+      // margin: 0px 0px 15px 0px;
+   }
+
+   // .touch-item__link
+
+   &__link {
+      // margin: 0px 0px 15px 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+
+   // .touch-item__mail
+
+   &__mail {
+      font-family: 'Montserrat';
+      display: inline-block;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.2px;
+      color: #252B42;
+
+   }
+
+   // .touch-item__title
+
+   &__title {
+      // margin: 0px 0px 15px 0px;
+      font-family: 'Montserrat';
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0.1px;
+      color: #252B42;
+   }
+
+   // .touch-item__btn
+
+   &__btn {
+      // display: inline-block;
+      font-family: 'Montserrat';
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.2px;
+      color: #FF7B47;
+      border: 1px solid #FF7B47;
+      border-radius: 5px;
+      // padding: 10px 20px;
+      min-height: 44px;
+      padding: 3px 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      // text-align: center;
+
+   }
+}

@@ -1,0 +1,233 @@
+.about__body {
+
+   // border: 1px solid red;
+}
+
+
+.about__headline {
+   margin: 0px 0px 100px 0px;
+   align-items: center;
+   text-align: center;
+
+   @media(max-width:992px) {
+      margin: 0px 0px 50px 0px;
+   }
+}
+
+.content-about__headline {
+   margin: 0px 0px 30px 0px;
+   padding: 20px 0px;
+
+   @media(max-width:992px) {
+      padding: 0px;
+   }
+}
+
+
+
+
+
+
+.about {
+   padding: 80px 0px 130px 0px;
+   // width: 100%;
+   // height: 100%;
+   // .about__body
+
+   // .about__body
+   &__body {
+
+      display: flex;
+      align-items: flex-start;
+      // justify-content: space-between;
+
+      // border: 1px solid red;
+      @media(max-width:875px) {
+         // display: block;
+         flex-direction: column-reverse;
+         // align-items: stretch;
+         //align-items: Можно и не возвращать все равно нужно будет менять padding и width для media
+      }
+   }
+
+   // .about__media
+
+   &__media {
+      padding: 0px 0px 43% 0px;
+      position: relative;
+      flex: 0 0 57%;
+
+      @media(max-width:875px) {
+         padding: 0px 0px 56% 0px;
+         width: 100%;
+
+      }
+
+
+
+      // min-width: 600px;
+      // overflow: hidden;
+      // width: 597px;
+      // height: 442px;
+      // border: 1px solid red;
+      margin: 0px 121px 0px 0px;
+
+      @media(max-width:992px) {
+         margin: 0px 80px 0px 0px;
+      }
+
+      & video {
+         position: absolute;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         // border: 1px solid red;
+         object-fit: cover;
+         background-color: black;
+      }
+
+      &::after {
+         content: '';
+         width: 98px;
+         height: 98px;
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         z-index: var(--heavy-index);
+         background-image: url('/image/icon/about_icon_play.png');
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         transform: translate(-50%, -50%);
+
+      }
+
+      &::before {
+         content: '';
+         width: 100%;
+         height: 100%;
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         background: linear-gradient(180deg, rgba(172, 14, 14, 0) 14.58%, rgba(56, 56, 56, 0.84) 100%);
+         z-index: var(--normal-index);
+
+      }
+
+      // &:hover::before {
+      //    background: none;
+      //    z-index: 0;
+      //    transition: 1s ease;
+      // }
+
+   }
+
+
+   // .about__content
+
+
+
+   &__content {
+
+      // max-width: 333px;
+      flex: 1 1 auto;
+
+
+
+      // padding: 0px 0px 0px 121px;
+      @media(max-width:875px) {
+
+         margin: 0px 0px 50px 0px;
+
+      }
+   }
+}
+
+.content-about {
+
+   // .content-about__title
+
+   &__title {}
+
+   // .content-about__text
+
+   &__text {}
+}
+
+
+.about-list {
+
+   // .about-list__item
+
+   &__item {
+      // border: 1px solid red;
+      position: relative;
+      padding: 0px 0px 0px 50px;
+
+      &:not(:last-child) {
+         margin: 0px 0px 30px 0px;
+      }
+
+      &::before {
+         content: '';
+
+         // background-color: red;
+         // border-radius: 50%;
+         position: absolute;
+         left: 0px;
+         top: 0;
+
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+      }
+
+
+   }
+
+
+
+
+   // .about-list__title
+
+   &__title {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.1px;
+      color: #252B42;
+      margin: 0px 0px 5px 0px;
+   }
+
+   // .about-list__text
+
+   &__text {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 24px;
+      /* identical to box height, or 171% */
+
+      letter-spacing: 0.2px;
+
+      /* second-text-color */
+
+      color: #737373;
+   }
+}
+
+.about-list__item_people::before {
+   width: 30px;
+   height: 30px;
+   background-image: url('/image/icon/about_icon_people.svg');
+}
+
+.about-list__item_time::before {
+   width: 32px;
+   height: 25px;
+   background-image: url('/image/icon/about_icon_speed.svg');
+}
